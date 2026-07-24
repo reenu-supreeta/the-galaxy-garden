@@ -1,7 +1,23 @@
+import {
+  BackgroundLayer,
+  DecorationLayer,
+  ForegroundLayer,
+  FurnitureLayer,
+  WindowLayer,
+} from './SceneLayers'
+
+/** Composes the bedroom from stable absolute scene layers. */
 export function Room() {
   return (
-    <section className="relative z-10 h-screen pt-[40vh] bg-slate-900 flex items-center justify-center text-yellow-300 text-4xl">
-      ROOM
+    <section
+      aria-label="Bedroom background"
+      className="relative z-10 min-h-screen overflow-hidden bg-[#2a1714]"
+    >
+      <BackgroundLayer />
+      <WindowLayer />
+      <FurnitureLayer />
+      <DecorationLayer />
+      <ForegroundLayer />
     </section>
-  );
+  )
 }
